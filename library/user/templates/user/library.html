@@ -1,0 +1,28 @@
+{% extends "user/layer.html" %}
+{% load static %}
+{% block title %}Library{% endblock title %}
+{% block style %}{% static "css/library.css" %}{% endblock style %}
+
+
+{% block library %}
+
+<div class="container">
+{% if request.user.is_authenticated %}
+<h1>Hello {{request.user}}</h1>
+<a href = "{% url "logout" %}">Logout</a>
+{% endif %}
+<p>ADD BOOK</p>
+<form method = "POST">
+<a href = " {% url "add_book" %}">Add your book</a>
+</form>
+    {% for book in books %}
+        <p>{{ book.title }} <a href="{% url 'delete' book.id %}">|Delete|</a>
+            <a href="{% url 'update' book.id %}">|Edit|</a>
+            <a href="{% if book.file %}{{ book.file.url }}{% else %}#{% endif %}" target="_blank">|📄 View PDF|</a>
+        </p>
+    {% empty %}
+        <p>No books found.</p>
+{% endfor %}
+</div>
+
+{% endblock library %}

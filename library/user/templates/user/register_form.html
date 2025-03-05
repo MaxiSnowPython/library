@@ -1,0 +1,21 @@
+{% extends "user/layer.html" %}
+{% load static %}
+{% block style %}{% static "css/register.css" %}{% endblock style %}
+{% block register %} 
+
+<div class = "container">
+<form method="POST">
+    {% csrf_token %}
+    <label>{{form.username.label}}</label>
+    {{form.username}}
+
+    <label>{{form.password1.label}}</label>
+    {{form.password1}}
+
+    <label>{{form.password2.label}}</label>
+    {{form.password2}}
+    <input style="margin-top:10px ;" class="button" type="submit" value="Register">
+</form>
+<p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+{% endblock register %}
+</div>

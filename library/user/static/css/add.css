@@ -1,0 +1,82 @@
+/* General container styling */
+.container {
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 800px;
+    background-color: rgba(116, 69, 147, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.6em;
+    color: #333;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #3a3a3a;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form input[type="submit"] {
+    background-color: #74529C;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #563379;
+}
+
+form p {
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+form a {
+    color: #74529C;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+form a:hover {
+    color: #563379;
+}
+
+form .form-row {
+    margin-bottom: 20px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+form .form-row input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+form .form-row input:focus {
+    border-color: #74529C;
+    outline: none;
+}
+
+form .form-row label {
+    font-size: 1.2em;
+    color: #3a3a3a;
+}

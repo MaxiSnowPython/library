@@ -1,0 +1,20 @@
+{% extends "user/layer.html" %}
+{% load static %}
+{% block style %}{% static "css/update.css" %}{% endblock style %}
+
+{% block update %}
+<div class = "container">
+<h1>gfdgd</h1>
+
+<form method = "POST">
+{% csrf_token %}
+
+{{form.as_p}}
+
+<button type = "submit">Update</button>
+<div>
+    <a href="{% url 'books' %}">&#8592; Go Back</a>
+</div>
+<form>
+</div>
+{% endblock update %}
