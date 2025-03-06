@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 class Book(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     title = models.CharField(max_length=100)
-    file = models.FileField(upload_to="documents/", default="documents/5b.pdf", null=True, blank=True)
+    file = models.FileField(upload_to="documents/", null=True, blank=True)
     data = models.DateField(auto_now=True)
 
     class Meta:
